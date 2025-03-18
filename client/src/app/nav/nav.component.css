@@ -2,3 +2,15 @@
 {
     cursor: pointer;
 }
+
+.btn-success {
+    background-color:cyan;
+    color: black;
+    border-color: transparent;
+}
+
+.btn-success:hover {
+    background-color:palevioletred;
+    color: white;
+    border-color: transparent;
+}
