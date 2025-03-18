@@ -5,6 +5,10 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { authGuard } from './_guards/auth.guard';
+import { errorContext } from 'rxjs/internal/util/errorContext';
+import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
+import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { ServerErrorComponent } from './errors/server-error/server-error.component';
 
 //authGuard - protecting from acessing components in client
 //dummy route - having child routes that inherit authGuard and url from it
@@ -21,6 +25,8 @@ export const routes: Routes = [
             {path: 'messages', component: MessagesComponent},
         ]
     },
-    
+    {path: 'not-found', component: NotFoundComponent},
+    {path: 'server-error', component: ServerErrorComponent},
+    {path: 'errors', component: TestErrorsComponent},
     {path: '**', component: HomeComponent, pathMatch: 'full'}
 ];
